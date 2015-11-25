@@ -5,6 +5,10 @@ PPunblur.py: uses unblur to perform per-partcle motiion correction.  The script 
 
 recenter.py: applies particle shifts from relion to the original picked particle coordinates and outputs a new star file that can be used for particle extraction in relion
 
-reorder4LMBFGS: reorders a relion star file to it can be used in the program LMBFGS for per-particle morion correction.  It requires input of a star file for each micrograph.  The output star files are written with fortran formatted columns, which are required for LMBFGS to operate properly.
+reorder4LMBFGS.py: reorders a relion star file to it can be used in the program LMBFGS for per-particle morion correction.  It requires input of a star file for each micrograph.  The output star files are written with fortran formatted columns, which are required for LMBFGS to operate properly.
+
+unblur-auto.py: runs unblur on multiple micrographs.  The script needs to be edited to specifiy the path to the local installation of unblur.  Tested with unblur 7.17.15
+
+motioncorr.py: runs motioncorr on multiple micrographs.  Requires imod for conversion of DM4 files to MRC and a local installation of motioncorr.  The paths to both of these programs must be specified by editing the marked area at the beginning of the script.
 
 For questions and support on these scripts contact Matt Iadanza (fbsmi@leeds.ac.uk)

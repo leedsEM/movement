@@ -1,2 +1,2 @@
 # movement
-Scripts described in 2016 Methods paper 
+These scripts are described in Rawson et al (2016).

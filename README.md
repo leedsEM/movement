@@ -13,6 +13,6 @@ motioncorr.py: runs motioncorr on multiple micrographs.  Requires imod for conve
   filename_corr_merged.mrc - the merged image from the motion corrected frames  
   filename_merge.mrc - the merged image from the uncorrected frames  
   filename_coor_stack.mrcs - the corrected frames  
-alternatively the script can be run in 'shaun mode' by running it with a '-s' flag.  This outputs only the corrected movie file in the format <filename>_movie.mrcs 
+alternatively the script can be run in 'shaun mode' by running it with a '-s' flag.  This outputs only the corrected movie file in the format filename_movie.mrcs 
 
 For questions and support on these scripts contact Matt Iadanza (fbsmi@leeds.ac.uk)

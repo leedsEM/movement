@@ -9,6 +9,10 @@ reorder4LMBFGS.py: reorders a relion star file to it can be used in the program 
 
 unblur-auto.py: runs unblur on multiple micrographs.  The script needs to be edited to specifiy the path to the local installation of unblur.  Tested with unblur 7.17.15
 
-motioncorr.py: runs motioncorr on multiple micrographs.  Requires imod for conversion of DM4 files to MRC and a local installation of motioncorr.  The paths to both of these programs must be specified by editing the marked area at the beginning of the script.
+motioncorr.py: runs motioncorr on multiple micrographs.  Requires imod for conversion of DM4 files to MRC and a local installation of motioncorr.  The paths to both of these programs must be specified by editing the marked area at the beginning of the script.  Outputs three files: 
+  <filename>_corr_merged.mrc - the merged image from the motion corrected frames
+  <filename>_merge.mrc - the merged image from the uncorrected frames
+  <filename>_coor_stack.mrcs - the corrected frames
+alternatively the script can be run in 'shaun mode' by running it with a '-s' flag.  This outputs only the corrected movie file in the format <filename>_movie.mrcs 
 
 For questions and support on these scripts contact Matt Iadanza (fbsmi@leeds.ac.uk)

@@ -34,11 +34,12 @@ for i in data:
 # make a starfile for each original file with the new corrdinates
 
 for i in filenames:
-    fileout = open("{0}_recentered.star".format(i.split(".")[0]),"w")
+    writename = i.split('/')[-1].split('.')[0]
+    fileout = open("{0}_recentered.star".format(writename),"w")
     fileout.write("\ndata_\n\nloop_\n_rlnCoordinateX #1\n_rlnCoordinateY #2\n")
     for j in data:
         if j[labeldic["_rlnMicrographName"]-1] == i:
             newx = float(j[labeldic["_rlnCoordinateX"]-1]) - float(j[labeldic["_rlnOriginX"]-1])
             newy = float(j[labeldic["_rlnCoordinateY"]-1]) - float(j[labeldic["_rlnOriginY"]-1])
             fileout.write("{0}\t{1}\n".format(newx,newy)) 
-print "wrote file:  {0}_recentered.star".format(i.split(".")[0])
+    print "wrote file:  {0}_recentered.star".format(writename)
